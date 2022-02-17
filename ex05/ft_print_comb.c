@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acardena <acardena@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/12 16:31:27 by acardena          #+#    #+#             */
-/*   Updated: 2022/02/14 18:37:00 by acardena         ###   ########.fr       */
+/*   Created: 2022/02/12 16:45:51 by acardena          #+#    #+#             */
+/*   Updated: 2022/02/17 11:22:40 by acardena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,45 @@ void	ft_putchar(char c)
 	write (1, &c, 1);
 }
 
-void	ft_is_negative(int n)
+void	ft_print(int a, int b, int c)
 {
-	if (n >= 0)
+	ft_putchar(a);
+	ft_putchar(b);
+	ft_putchar(c);
+	ft_putchar(',');
+	ft_putchar(' ');
+}
+
+void	ft_print_comb(void)
+{
+	int	a;
+	int	b;
+	int	c;
+
+	a = '0' - 1;
+	while (a++ < '7')
 	{
-		ft_putchar('P');
-	}
-	else
-	{	
-		ft_putchar('N');
+		b = a;
+		while (b++ < '8')
+		{
+			c = b;
+			while (c++ < '9')
+			{
+				ft_putchar(a);
+				ft_putchar(b);
+				ft_putchar(c);
+				if (a != '7')
+				{
+					ft_putchar(',');
+					ft_putchar(' ');
+				}
+			}
+		}
 	}
 }
 /*
-int	main(void)
+int	main(int argc, const char *argv[])
 {
-	ft_is_negative(-6);
-	write(1, "\n", 1);
-	ft_is_negative(0);
-	write(1, "\n", 1);
-	ft_is_negative(6);
+	ft_print_comb();
 	return (0);
 }*/

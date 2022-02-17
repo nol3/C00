@@ -6,7 +6,7 @@
 /*   By: acardena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 11:16:25 by acardena          #+#    #+#             */
-/*   Updated: 2022/02/11 11:31:13 by acardena         ###   ########.fr       */
+/*   Updated: 2022/02/14 18:34:25 by acardena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,9 @@ void	ft_print_alphabet(void)
 		i++;
 	}
 }
+/*
+int	main(void)
+{
+	ft_print_alphabet();
+	return (0);
+}*/
